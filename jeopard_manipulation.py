@@ -57,6 +57,12 @@ def nunique_answers_per_topic(df, topic):
       answer_and_count.append([answers.count(answer), answer.upper()])
    return answer_and_count
 
+#update for answers count based on keyword
+def update_nunique_answers_per_topic(df, topics_list):
+  print(df[df.Question.isin\
+(grab_questions_by_list\
+(df, topics_list))].Answer.value_counts())
+
 #unique_answers_king_questions = nunique_answers_per_topic(jeopardy, 'king')
 
 #print(unique_answers_king_questions)
